@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Desktop\\Task03\\Lab3\\Lab3.csproj": {}
+    "D:\\ХАІ\\2 курс\\1 семестр\\Open GL\\GIT\\OpenGL\\Task03\\Lab3\\Lab3.csproj": {}
   },
   "projects": {
-    "D:\\Desktop\\Task03\\Lab3\\Lab3.csproj": {
+    "D:\\ХАІ\\2 курс\\1 семестр\\Open GL\\GIT\\OpenGL\\Task03\\Lab3\\Lab3.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Desktop\\Task03\\Lab3\\Lab3.csproj",
+        "projectUniqueName": "D:\\ХАІ\\2 курс\\1 семестр\\Open GL\\GIT\\OpenGL\\Task03\\Lab3\\Lab3.csproj",
         "projectName": "Lab3",
-        "projectPath": "D:\\Desktop\\Task03\\Lab3\\Lab3.csproj",
+        "projectPath": "D:\\ХАІ\\2 курс\\1 семестр\\Open GL\\GIT\\OpenGL\\Task03\\Lab3\\Lab3.csproj",
         "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "D:\\Desktop\\Task03\\Lab3\\obj\\",
+        "outputPath": "D:\\ХАІ\\2 курс\\1 семестр\\Open GL\\GIT\\OpenGL\\Task03\\Lab3\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",

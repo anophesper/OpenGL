@@ -53,3 +53,22 @@ D:\Desktop\Task03\Lab3\obj\Debug\net6.0-windows\refint\Lab3.dll
 D:\Desktop\Task03\Lab3\obj\Debug\net6.0-windows\Lab3.pdb
 D:\Desktop\Task03\Lab3\obj\Debug\net6.0-windows\Lab3.genruntimeconfig.cache
 D:\Desktop\Task03\Lab3\obj\Debug\net6.0-windows\ref\Lab3.dll
+D:\ХАІ\2 курс\1 семестр\Open GL\GIT\OpenGL\Task03\Lab3\bin\Debug\net6.0-windows\Lab3.exe
+D:\ХАІ\2 курс\1 семестр\Open GL\GIT\OpenGL\Task03\Lab3\bin\Debug\net6.0-windows\Lab3.deps.json
+D:\ХАІ\2 курс\1 семестр\Open GL\GIT\OpenGL\Task03\Lab3\bin\Debug\net6.0-windows\Lab3.runtimeconfig.json
+D:\ХАІ\2 курс\1 семестр\Open GL\GIT\OpenGL\Task03\Lab3\bin\Debug\net6.0-windows\Lab3.dll
+D:\ХАІ\2 курс\1 семестр\Open GL\GIT\OpenGL\Task03\Lab3\bin\Debug\net6.0-windows\Lab3.pdb
+D:\ХАІ\2 курс\1 семестр\Open GL\GIT\OpenGL\Task03\Lab3\obj\Debug\net6.0-windows\Lab3.MainForm.resources
+D:\ХАІ\2 курс\1 семестр\Open GL\GIT\OpenGL\Task03\Lab3\obj\Debug\net6.0-windows\Lab3.OpenGL.resources
+D:\ХАІ\2 курс\1 семестр\Open GL\GIT\OpenGL\Task03\Lab3\obj\Debug\net6.0-windows\Lab3.RenderControl.resources
+D:\ХАІ\2 курс\1 семестр\Open GL\GIT\OpenGL\Task03\Lab3\obj\Debug\net6.0-windows\Lab3.csproj.GenerateResource.cache
+D:\ХАІ\2 курс\1 семестр\Open GL\GIT\OpenGL\Task03\Lab3\obj\Debug\net6.0-windows\Lab3.GeneratedMSBuildEditorConfig.editorconfig
+D:\ХАІ\2 курс\1 семестр\Open GL\GIT\OpenGL\Task03\Lab3\obj\Debug\net6.0-windows\Lab3.AssemblyInfoInputs.cache
+D:\ХАІ\2 курс\1 семестр\Open GL\GIT\OpenGL\Task03\Lab3\obj\Debug\net6.0-windows\Lab3.AssemblyInfo.cs
+D:\ХАІ\2 курс\1 семестр\Open GL\GIT\OpenGL\Task03\Lab3\obj\Debug\net6.0-windows\Lab3.csproj.CoreCompileInputs.cache
+D:\ХАІ\2 курс\1 семестр\Open GL\GIT\OpenGL\Task03\Lab3\obj\Debug\net6.0-windows\Lab3.sourcelink.json
+D:\ХАІ\2 курс\1 семестр\Open GL\GIT\OpenGL\Task03\Lab3\obj\Debug\net6.0-windows\Lab3.dll
+D:\ХАІ\2 курс\1 семестр\Open GL\GIT\OpenGL\Task03\Lab3\obj\Debug\net6.0-windows\refint\Lab3.dll
+D:\ХАІ\2 курс\1 семестр\Open GL\GIT\OpenGL\Task03\Lab3\obj\Debug\net6.0-windows\Lab3.pdb
+D:\ХАІ\2 курс\1 семестр\Open GL\GIT\OpenGL\Task03\Lab3\obj\Debug\net6.0-windows\Lab3.genruntimeconfig.cache
+D:\ХАІ\2 курс\1 семестр\Open GL\GIT\OpenGL\Task03\Lab3\obj\Debug\net6.0-windows\ref\Lab3.dll

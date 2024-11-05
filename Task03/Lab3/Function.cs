@@ -9,46 +9,126 @@ namespace Lab3
 {
     class Function
     {
-        // метод для обчислення першої функції
-        public (double[] pointsX, double[] pointsY) FirstFunction(double xMin, double xMax, int numPoints)
+        private double xMin;
+        private double xMax;
+        private double yMin;
+        private double yMax;
+        private int points;
+        private int currentselectedFunc;
+        private double[] pointsX, pointsY;
+
+        //геттери та сеттери
+        public double GetXMin()
         {
-            double[] pointsX = new double[numPoints];
-            double[] pointsY = new double[numPoints];
+            return xMin;
+        }
+        public double GetXMax()
+        {
+            return xMax;
+        }
+        public void SetX(double minValue, double maxValue)
+        {
+            xMin = minValue;
+            xMax = maxValue;
+            if (currentselectedFunc == 1)
+                FirstFunction();
+            else
+                SecondFunction();
+            GetYRange();
+        }
+
+        public double GetYMin()
+        {
+            return yMin;
+        }
+        public double GetYMax()
+        {
+            return yMax;
+        }
+        public void SetY(double minValue, double maxValue)
+        {
+            yMin = minValue;
+            yMax = maxValue;
+        }
+
+        public int GetPoints()
+        {
+            return points;
+        }
+        public void SetPoints(int value)
+        {
+            points = value;
+        }
+
+        public int GetCurrentSelectedFunc()
+        {
+            return currentselectedFunc;
+        }
+        public void SetCurrentSelectedFunc(int value)
+        {
+            currentselectedFunc = value;
+        }
+
+        //конструктор класу 
+        public Function (double xMin, double xMax, int points, int currentSelectedFunc)
+        {
+            SetPoints(points);
+            SetCurrentSelectedFunc(currentSelectedFunc);
+            SetX(xMin, xMax);
+        }
+
+        // метод для отримання yMin, yMax
+        public void GetYRange()
+        {
+            yMin = 0; yMax = 0;
+            foreach (double y in pointsY)
+            {
+                if (y < yMin) yMin = y;
+                if (y > yMax) yMax = y;
+            }
+
+            //обмежуємо Y в межах -10, +10 якщо yMin yMax перевищують ці значення
+            yMin = Math.Max(yMin, -10);
+            yMax = Math.Min(yMax, 10);
+
+            SetY(yMin, yMax);
+        }
+
+        // метод для обчислення першої функції
+        public void FirstFunction()
+        {
+            pointsX = new double[points];
+            pointsY = new double[points];
 
             //вираховуємо крок на основі діапазону X і кількості точок
-            double step = (double)(xMax - xMin) / (numPoints - 1);
+            double step = (double)(xMax - xMin) / (points - 1);
             // генерація точок X та обчислення відповідних значень Y
-            for (int i = 0; i < numPoints; i++)
+            for (int i = 0; i < points; i++)
             {
                 pointsX[i] = xMin + i * step;
                 pointsY[i] = Math.Cos(Math.PI * pointsX[i]) / Math.Pow((Math.Sin(5 * Math.PI * Math.Pow(pointsX[i], 3)) + 1.5), 3);
             }
-            return (pointsX, pointsY);
         }
 
         // метод для обчислення другої функції
-        public (double[] pointsX, double[] pointsY) SecondFunction(double xMin, double xMax, int numPoints)
+        public void SecondFunction()
         {
-            double[] pointsX = new double[numPoints];
-            double[] pointsY = new double[numPoints];
+            pointsX = new double[points];
+            pointsY = new double[points];
 
             // вираховуємо крок на основі діапазону X і кількості точок
-            double step = (double)(xMax - xMin) / (numPoints - 1);
+            double step = (double)(xMax - xMin) / (points - 1);
             // генерація точок X та обчислення відповідних значень Y
-            for (int i = 0; i < numPoints; i++)
+            for (int i = 0; i < points; i++)
             {
                 pointsX[i] = xMin + i * step;
                 pointsY[i] = Math.Tan(2 * Math.Sin(pointsX[i]));
             }
-            return (pointsX, pointsY);
         }
 
         // метод для малювання графіку
-        public void DrawGraph((double[] pointsX, double[] pointsY) points)
+        public void DrawGraph()
         {
-            double[] pointsX = points.pointsX;
-            double[] pointsY = points.pointsY;
-            var (ymin, ymax) = GetYRange(pointsY); // отримуємо значення ymin, ymax для методу DrawDashedLine
             glLineWidth(2);
             glColor3d(0, 0, 0);
 
@@ -103,7 +183,7 @@ namespace Lab3
                     EndSegment();
                     if (!hasDrawnGap)
                     {
-                        DrawDashedLine(pointsX[i], ymin, ymax);
+                        DrawDashedLine(pointsX[i]);
                         hasDrawnGap = true; // оновлюємо значення, щоб уникнути повторного малювання точки розриву на поточному сегменті
                     }
                 }
@@ -112,7 +192,7 @@ namespace Lab3
         }
 
         // метод для малювання точок перетину графіку з віссю X
-        private void DrawIntersectionPoint(double x, double y)
+        private static void DrawIntersectionPoint(double x, double y)
         {
             glPointSize(6);
             glColor3d(1.0, 0.55, 0.0); // помаранчевий колір
@@ -123,7 +203,7 @@ namespace Lab3
         }
 
         // метод для малювання темно-зеленої пунктирної лінії на місці розриву
-        private void DrawDashedLine(double x, double ymin, double ymax)
+        private void DrawDashedLine(double x)
         {
             glLineWidth(1);
             glColor3d(0, 0.5, 0); // темно-зелений колір
@@ -131,35 +211,16 @@ namespace Lab3
             glLineStipple(1, 0x00FF); // пунктирна лінія
 
             glBegin(GL_LINES);
-            glVertex2d(x, ymin);
-            glVertex2d(x, ymax);
+            glVertex2d(x, yMin);
+            glVertex2d(x, yMax);
             glEnd();
 
             glDisable(GL_LINE_STIPPLE);
             glColor3d(0, 0, 0); // повертаємо чорний колір для основного графіку
         }
 
-        // метод для отримання yMin, yMax
-        public (double yMin, double yMax) GetYRange(double[] pointsY)
-        {
-            double yMin = double.PositiveInfinity;
-            double yMax = double.NegativeInfinity;
-
-            foreach (double y in pointsY)
-            {
-                if (y < yMin) yMin = y;
-                if (y > yMax) yMax = y;
-            }
-
-            //обмежуємо Y в межах -10, +10 якщо yMin yMax перевищують ці значення
-            yMin = Math.Max(yMin, -10);
-            yMax = Math.Min(yMax, 10);
-
-            return (yMin, yMax);
-        }
-
         // метод для малювання осей координат
-        public void DrawCoordinateAxis(double xMin, double xMax, double yMin, double yMax)
+        public void DrawCoordinateAxis()
         {
             glLineWidth(2);
             glColor3d(0.25, 0.25, 0.25);
@@ -175,7 +236,7 @@ namespace Lab3
         }
 
         // метод для малювання фонової розмітки
-        public void DrawBackgroundMarkup(double xMin, double xMax, double yMin, double yMax)
+        public void DrawBackgroundMarkup()
         {
             glLineWidth(1);
             glColor3d(0.75, 0.75, 0.75);
