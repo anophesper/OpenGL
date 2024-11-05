@@ -1,0 +1,74 @@
+D:\ХАІ\2 курс\1 семестр\Open GL\Projects\Task02\Lab2\bin\Debug\net6.0-windows\Lab2.exe
+D:\ХАІ\2 курс\1 семестр\Open GL\Projects\Task02\Lab2\bin\Debug\net6.0-windows\Lab2.deps.json
+D:\ХАІ\2 курс\1 семестр\Open GL\Projects\Task02\Lab2\bin\Debug\net6.0-windows\Lab2.runtimeconfig.json
+D:\ХАІ\2 курс\1 семестр\Open GL\Projects\Task02\Lab2\bin\Debug\net6.0-windows\Lab2.dll
+D:\ХАІ\2 курс\1 семестр\Open GL\Projects\Task02\Lab2\bin\Debug\net6.0-windows\Lab2.pdb
+D:\ХАІ\2 курс\1 семестр\Open GL\Projects\Task02\Lab2\obj\Debug\net6.0-windows\Lab2.MainForm.resources
+D:\ХАІ\2 курс\1 семестр\Open GL\Projects\Task02\Lab2\obj\Debug\net6.0-windows\Lab2.OpenGL.resources
+D:\ХАІ\2 курс\1 семестр\Open GL\Projects\Task02\Lab2\obj\Debug\net6.0-windows\Lab2.RenderControl.resources
+D:\ХАІ\2 курс\1 семестр\Open GL\Projects\Task02\Lab2\obj\Debug\net6.0-windows\Lab2.csproj.GenerateResource.cache
+D:\ХАІ\2 курс\1 семестр\Open GL\Projects\Task02\Lab2\obj\Debug\net6.0-windows\Lab2.GeneratedMSBuildEditorConfig.editorconfig
+D:\ХАІ\2 курс\1 семестр\Open GL\Projects\Task02\Lab2\obj\Debug\net6.0-windows\Lab2.AssemblyInfoInputs.cache
+D:\ХАІ\2 курс\1 семестр\Open GL\Projects\Task02\Lab2\obj\Debug\net6.0-windows\Lab2.AssemblyInfo.cs
+D:\ХАІ\2 курс\1 семестр\Open GL\Projects\Task02\Lab2\obj\Debug\net6.0-windows\Lab2.csproj.CoreCompileInputs.cache
+D:\ХАІ\2 курс\1 семестр\Open GL\Projects\Task02\Lab2\obj\Debug\net6.0-windows\Lab2.sourcelink.json
+D:\ХАІ\2 курс\1 семестр\Open GL\Projects\Task02\Lab2\obj\Debug\net6.0-windows\Lab2.dll
+D:\ХАІ\2 курс\1 семестр\Open GL\Projects\Task02\Lab2\obj\Debug\net6.0-windows\refint\Lab2.dll
+D:\ХАІ\2 курс\1 семестр\Open GL\Projects\Task02\Lab2\obj\Debug\net6.0-windows\Lab2.pdb
+D:\ХАІ\2 курс\1 семестр\Open GL\Projects\Task02\Lab2\obj\Debug\net6.0-windows\Lab2.genruntimeconfig.cache
+D:\ХАІ\2 курс\1 семестр\Open GL\Projects\Task02\Lab2\obj\Debug\net6.0-windows\ref\Lab2.dll
+D:\ХАІ\2 курс\1 семестр\Open GL\Task02\Lab2\bin\Debug\net6.0-windows\Lab2.exe
+D:\ХАІ\2 курс\1 семестр\Open GL\Task02\Lab2\bin\Debug\net6.0-windows\Lab2.deps.json
+D:\ХАІ\2 курс\1 семестр\Open GL\Task02\Lab2\bin\Debug\net6.0-windows\Lab2.runtimeconfig.json
+D:\ХАІ\2 курс\1 семестр\Open GL\Task02\Lab2\bin\Debug\net6.0-windows\Lab2.dll
+D:\ХАІ\2 курс\1 семестр\Open GL\Task02\Lab2\bin\Debug\net6.0-windows\Lab2.pdb
+D:\ХАІ\2 курс\1 семестр\Open GL\Task02\Lab2\obj\Debug\net6.0-windows\Lab2.MainForm.resources
+D:\ХАІ\2 курс\1 семестр\Open GL\Task02\Lab2\obj\Debug\net6.0-windows\Lab2.OpenGL.resources
+D:\ХАІ\2 курс\1 семестр\Open GL\Task02\Lab2\obj\Debug\net6.0-windows\Lab2.RenderControl.resources
+D:\ХАІ\2 курс\1 семестр\Open GL\Task02\Lab2\obj\Debug\net6.0-windows\Lab2.csproj.GenerateResource.cache
+D:\ХАІ\2 курс\1 семестр\Open GL\Task02\Lab2\obj\Debug\net6.0-windows\Lab2.GeneratedMSBuildEditorConfig.editorconfig
+D:\ХАІ\2 курс\1 семестр\Open GL\Task02\Lab2\obj\Debug\net6.0-windows\Lab2.AssemblyInfoInputs.cache
+D:\ХАІ\2 курс\1 семестр\Open GL\Task02\Lab2\obj\Debug\net6.0-windows\Lab2.AssemblyInfo.cs
+D:\ХАІ\2 курс\1 семестр\Open GL\Task02\Lab2\obj\Debug\net6.0-windows\Lab2.csproj.CoreCompileInputs.cache
+D:\ХАІ\2 курс\1 семестр\Open GL\Task02\Lab2\obj\Debug\net6.0-windows\Lab2.dll
+D:\ХАІ\2 курс\1 семестр\Open GL\Task02\Lab2\obj\Debug\net6.0-windows\refint\Lab2.dll
+D:\ХАІ\2 курс\1 семестр\Open GL\Task02\Lab2\obj\Debug\net6.0-windows\Lab2.pdb
+D:\ХАІ\2 курс\1 семестр\Open GL\Task02\Lab2\obj\Debug\net6.0-windows\Lab2.genruntimeconfig.cache
+D:\ХАІ\2 курс\1 семестр\Open GL\Task02\Lab2\obj\Debug\net6.0-windows\ref\Lab2.dll
+D:\ХАІ\2 курс\1 семестр\Open GL\Task02\Task02\Lab2\bin\Debug\net6.0-windows\Lab2.exe
+D:\ХАІ\2 курс\1 семестр\Open GL\Task02\Task02\Lab2\bin\Debug\net6.0-windows\Lab2.deps.json
+D:\ХАІ\2 курс\1 семестр\Open GL\Task02\Task02\Lab2\bin\Debug\net6.0-windows\Lab2.runtimeconfig.json
+D:\ХАІ\2 курс\1 семестр\Open GL\Task02\Task02\Lab2\bin\Debug\net6.0-windows\Lab2.dll
+D:\ХАІ\2 курс\1 семестр\Open GL\Task02\Task02\Lab2\bin\Debug\net6.0-windows\Lab2.pdb
+D:\ХАІ\2 курс\1 семестр\Open GL\Task02\Task02\Lab2\obj\Debug\net6.0-windows\Lab2.MainForm.resources
+D:\ХАІ\2 курс\1 семестр\Open GL\Task02\Task02\Lab2\obj\Debug\net6.0-windows\Lab2.OpenGL.resources
+D:\ХАІ\2 курс\1 семестр\Open GL\Task02\Task02\Lab2\obj\Debug\net6.0-windows\Lab2.RenderControl.resources
+D:\ХАІ\2 курс\1 семестр\Open GL\Task02\Task02\Lab2\obj\Debug\net6.0-windows\Lab2.csproj.GenerateResource.cache
+D:\ХАІ\2 курс\1 семестр\Open GL\Task02\Task02\Lab2\obj\Debug\net6.0-windows\Lab2.GeneratedMSBuildEditorConfig.editorconfig
+D:\ХАІ\2 курс\1 семестр\Open GL\Task02\Task02\Lab2\obj\Debug\net6.0-windows\Lab2.AssemblyInfoInputs.cache
+D:\ХАІ\2 курс\1 семестр\Open GL\Task02\Task02\Lab2\obj\Debug\net6.0-windows\Lab2.AssemblyInfo.cs
+D:\ХАІ\2 курс\1 семестр\Open GL\Task02\Task02\Lab2\obj\Debug\net6.0-windows\Lab2.csproj.CoreCompileInputs.cache
+D:\ХАІ\2 курс\1 семестр\Open GL\Task02\Task02\Lab2\obj\Debug\net6.0-windows\Lab2.sourcelink.json
+D:\ХАІ\2 курс\1 семестр\Open GL\Task02\Task02\Lab2\obj\Debug\net6.0-windows\Lab2.dll
+D:\ХАІ\2 курс\1 семестр\Open GL\Task02\Task02\Lab2\obj\Debug\net6.0-windows\refint\Lab2.dll
+D:\ХАІ\2 курс\1 семестр\Open GL\Task02\Task02\Lab2\obj\Debug\net6.0-windows\Lab2.pdb
+D:\ХАІ\2 курс\1 семестр\Open GL\Task02\Task02\Lab2\obj\Debug\net6.0-windows\Lab2.genruntimeconfig.cache
+D:\ХАІ\2 курс\1 семестр\Open GL\Task02\Task02\Lab2\obj\Debug\net6.0-windows\ref\Lab2.dll
+D:\Desktop\Task02\Lab2\bin\Debug\net6.0-windows\Lab2.exe
+D:\Desktop\Task02\Lab2\bin\Debug\net6.0-windows\Lab2.deps.json
+D:\Desktop\Task02\Lab2\bin\Debug\net6.0-windows\Lab2.runtimeconfig.json
+D:\Desktop\Task02\Lab2\bin\Debug\net6.0-windows\Lab2.dll
+D:\Desktop\Task02\Lab2\bin\Debug\net6.0-windows\Lab2.pdb
+D:\Desktop\Task02\Lab2\obj\Debug\net6.0-windows\Lab2.MainForm.resources
+D:\Desktop\Task02\Lab2\obj\Debug\net6.0-windows\Lab2.OpenGL.resources
+D:\Desktop\Task02\Lab2\obj\Debug\net6.0-windows\Lab2.RenderControl.resources
+D:\Desktop\Task02\Lab2\obj\Debug\net6.0-windows\Lab2.csproj.GenerateResource.cache
+D:\Desktop\Task02\Lab2\obj\Debug\net6.0-windows\Lab2.GeneratedMSBuildEditorConfig.editorconfig
+D:\Desktop\Task02\Lab2\obj\Debug\net6.0-windows\Lab2.AssemblyInfoInputs.cache
+D:\Desktop\Task02\Lab2\obj\Debug\net6.0-windows\Lab2.AssemblyInfo.cs
+D:\Desktop\Task02\Lab2\obj\Debug\net6.0-windows\Lab2.csproj.CoreCompileInputs.cache
+D:\Desktop\Task02\Lab2\obj\Debug\net6.0-windows\Lab2.dll
+D:\Desktop\Task02\Lab2\obj\Debug\net6.0-windows\refint\Lab2.dll
+D:\Desktop\Task02\Lab2\obj\Debug\net6.0-windows\Lab2.pdb
+D:\Desktop\Task02\Lab2\obj\Debug\net6.0-windows\Lab2.genruntimeconfig.cache
+D:\Desktop\Task02\Lab2\obj\Debug\net6.0-windows\ref\Lab2.dll
