@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using static Task06.OpenGL;
 
 namespace Task06
@@ -13,12 +9,12 @@ namespace Task06
         private double segmentB;
         private double angleA; // Кут першого сегмента
         private double angleB; // Кут другого сегмента
-        private double angleZ; // Новий кут для обертання навколо осі Y
+        private double angleY; // Новий кут для обертання навколо осі Y
         
         // Властивості для зміни параметрів
         public double AngleA { get => angleA; set => angleA = value; }
         public double AngleB { get => angleB; set => angleB = value; }
-        public double AngleZ { get => angleZ; set => angleZ = value; }
+        public double AngleY { get => angleY; set => angleY = value; }
         public double SegmentA { get => segmentA; set => segmentA = value; }
         public double SegmentB { get => segmentB; set => segmentB = value; }
 
@@ -26,39 +22,30 @@ namespace Task06
         {
             segmentA = a;
             segmentB = b;
-            angleA = 0; // Початковий кут
-            angleB = 0; // Початковий кут
+            angleA = 0;
+            angleB = 0;
+            angleY = 0;
         }
 
         public void Draw()
         {
-            glColor3d(0.0, 0.0, 1.0);
-            glRotated(angleZ, 0, 1, 0);  // Обертання навколо осі Y
-
+            glRotated(angleY, 0, 1, 0);  // Обертання навколо осі Y
             glPushMatrix();
-            // Сфера на початку першого сегменту
-            glTranslated(0, 0, 0);
-            gluSphere(gluNewQuadric(), 0.05, 16, 16);
+            DrawSphere(0.05);// Сфера на початку першого сегменту
 
             // Перший сегмент
             glRotated(angleA, 0, 0, 1);
             glRotated(90, 0, 1, 0);
             DrawSegment(segmentA);
             glTranslated(0, segmentA, 0);
-
-            // Сфера на з'єднанні сегментів
-            glTranslated(0, 0, 0);
-            gluSphere(gluNewQuadric(), 0.05, 16, 16);
+            DrawSphere(0.05);// Сфера на з'єднанні сегментів
 
             // Другий сегмент
             glRotated(angleB, 1, 0, 0);
             glRotated(90, 0, 1, 0);
             DrawSegment(segmentB);
             glTranslated(0, segmentB, 0);
-
-            // Третя сфера на кінці другого сегмента
-            glTranslated(0, 0, 0);
-            gluSphere(gluNewQuadric(), 0.05, 16, 16);
+            DrawSphere(0.05);// Третя сфера на кінці другого сегмента
 
             glPopMatrix();
         }
@@ -68,9 +55,12 @@ namespace Task06
             // Створюємо об'єкт циліндра
             IntPtr quadric = gluNewQuadric();
 
-            // Встановлюємо параметри циліндра
-            gluQuadricNormals(quadric, GLU_SMOOTH);
-            gluQuadricDrawStyle(quadric, GLU_FILL);
+            // Матеріал для сегмента
+            float[] ambient = { 0.2f, 0.2f, 0.5f, 1.0f }; // Синюватий відтінок
+            float[] diffuse = { 0.0f, 0.5f, 1.0f, 0.8f }; // Прозорість 0.8
+            float[] specular = { 1.0f, 1.0f, 1.0f, 1.0f }; // Білі відблиски
+            float shininess = 64.0f; // Високий блиск
+            ApplyMaterial(ambient, diffuse, specular, shininess, diffuse[3]);
 
             // Трансляція та орієнтація циліндра
             glPushMatrix();
@@ -78,8 +68,39 @@ namespace Task06
             glRotated(270, 1, 0, 0);
             gluCylinder(quadric, 0.05, 0.05, length, 32, 32);
             glPopMatrix();
-
             gluDeleteQuadric(quadric);
+        }
+
+        private void DrawSphere(double radius)
+        {
+            IntPtr quadric = gluNewQuadric();
+
+            // Матеріал для сфер
+            float[] ambient = { 0.2f, 0.2f, 0.5f, 1.0f }; // Синюватий відтінок
+            float[] diffuse = { 0.0f, 0.5f, 1.0f, 0.8f }; // Прозорість 0.8
+            float[] specular = { 1.0f, 1.0f, 1.0f, 1.0f }; // Білі відблиски
+            float shininess = 64.0f; // Високий блиск
+            ApplyMaterial(ambient, diffuse, specular, shininess, diffuse[3]);
+
+            // Малюємо сферу
+            gluSphere(quadric, radius, 16, 16);
+            gluDeleteQuadric(quadric);
+        }
+
+        private void ApplyMaterial(float[] ambient, float[] diffuse, float[] specular, float shininess, float alpha)
+        {
+            // Встановлення прозорості
+            glEnable(GL_BLEND);
+            glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+
+            // Встановлення матеріалів
+            glMaterialfv(GL_FRONT, GL_AMBIENT, ambient); // Фонове світло
+            glMaterialfv(GL_FRONT, GL_DIFFUSE, diffuse); // Розсіяне світло
+            glMaterialfv(GL_FRONT, GL_SPECULAR, specular); // Дзеркальне світло
+            glMaterialf(GL_FRONT, GL_SHININESS, shininess); // Блискучість
+
+            // Встановлення кольору з прозорістю
+            glColor4f(diffuse[0], diffuse[1], diffuse[2], alpha);
         }
 
         // малюємо вісі

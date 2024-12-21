@@ -1,25 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Diagnostics;
 using System.Drawing;
-using System.Drawing.Design;
-using System.Linq;
-using System.Runtime.InteropServices;
 using System.Windows.Forms;
 
 namespace Task06
 {
     public partial class RenderControl : OpenGL
     {
-        double size = 1.1;
         double AspectRatio => (double)Width / Height;
-        double xMin => (AspectRatio > 1) ? -size * AspectRatio : -size;
-        double xMax => (AspectRatio > 1) ? size * AspectRatio : size;
-        double yMin => (AspectRatio < 1) ? -size / AspectRatio : -size;
-        double yMax => (AspectRatio < 1) ? size / AspectRatio : size;
-        double zMin => -size * 10;
-        double zMax => +size * 10;
         double ax = 10, ay = -20;
         double M = 1;
 
@@ -39,7 +26,18 @@ namespace Task06
 
             glViewport(0, 0, Width, Height);
 
-            glOrtho(xMin, xMax, yMin, yMax, zMin, zMax);
+            // Встановлюємо перспективну проекцію
+            glMatrixMode(GL_PROJECTION);
+            glLoadIdentity();
+            gluPerspective(45.0, AspectRatio, 0.1, 100.0); // Кут огляду 45°, ближня і дальня площини
+            glMatrixMode(GL_MODELVIEW);
+
+            // Камера (позиція спостерігача)
+            gluLookAt(
+                2.0, 2.0, 3.0, // Позиція камери
+                0.0, 0.0, 0.0, // Точка, на яку дивиться камера
+                0.0, 1.0, 0.0 // Вектор вгору (y-вісь)
+            );
 
             // Встановлюємо статичну позицію світла перед обертанням сцени
             float[] lightPosition = { 1.0f, 1.0f, 1.0f, 0.0f };
@@ -78,11 +76,11 @@ namespace Task06
                 case Keys.A: // Зменшення кута другого сегмента
                     manipulator.AngleB -= 5;
                     break;
-                case Keys.Q: // Збільшення кута обертання навколо осі Z для першого сегмента
-                    manipulator.AngleZ += 5;
+                case Keys.Q: // Збільшення кута обертання навколо осі Y
+                    manipulator.AngleY += 5;
                     break;
-                case Keys.E: // Зменшення кута обертання навколо осі Z для першого сегмента
-                    manipulator.AngleZ -= 5;
+                case Keys.E: // Зменшення кута обертання навколо осі Y
+                    manipulator.AngleY -= 5;
                     break;
             }
             Invalidate();
@@ -127,25 +125,15 @@ namespace Task06
             glEnable(GL_LIGHTING); // Увімкнути освітлення
             glEnable(GL_LIGHT0); // Увімкнути перше джерело світла
 
-            // Позиція джерела світла (статичне положення)
-            float[] lightPosition = { 1.0f, 1.0f, 1.0f, 0.0f }; // X, Y, Z, W (0.0 - нескінченно далеке джерело світла)
-            glLightfv(GL_LIGHT0, GL_POSITION, lightPosition);
-
-            // Колір світла
-            float[] lightAmbient = { 0.2f, 0.2f, 0.2f, 1.0f }; // Фонове світло
-            float[] lightDiffuse = { 0.8f, 0.8f, 0.8f, 1.0f }; // Розсіяне світло
-            float[] lightSpecular = { 1.0f, 1.0f, 1.0f, 1.0f }; // Дзеркальне світло
-
-            glLightfv(GL_LIGHT0, GL_AMBIENT, lightAmbient);
-            glLightfv(GL_LIGHT0, GL_DIFFUSE, lightDiffuse);
-            glLightfv(GL_LIGHT0, GL_SPECULAR, lightSpecular);
-
             // Ввімкнути матеріали
             glEnable(GL_COLOR_MATERIAL);
             glColorMaterial(GL_FRONT, GL_AMBIENT_AND_DIFFUSE);
+
+            // Ввімкнення прозорості
+            glEnable(GL_BLEND);
+            glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
 
             manipulator = new Manipulator(0.6, 0.8);
         }
     }
 }
-
